@@ -50,10 +50,10 @@ export default {
     Card,
     EmptyCart
   },
-  methods: {
+  mounted: {
     getFood () {
       axios.get('http://localhost:3000/produks/getall').then((response) => {
-        this.foods = response.data
+        console.log(response.data)
       }).catch((err) => {
         console.log(err)
       })

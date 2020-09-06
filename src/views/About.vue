@@ -5,10 +5,3 @@
   </div>
 </template>
 <script>
-export default {
-  name: 'About',
-  props: {
-    pesan: String
-  }
-}
-</script>
