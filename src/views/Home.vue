@@ -10,21 +10,32 @@
         </b-row>
           <b-row class="menu">
           <b-col lg="4" cols="6" class="p-3">
-            <Card /></b-col>
-             <b-col lg="4" cols="6" class="p-3">
-            <Card /></b-col>
-             <b-col lg="4" cols="6" class="p-3">
             <Card />
-            </b-col>
+          </b-col>
+          <b-col lg="4" cols="6" class="p-3">
+            <Card />
+          </b-col>
+          <b-col lg="4" cols="6" class="p-3">
+            <Card />
+          </b-col>
+          <b-col lg="4" cols="6" class="p-3">
+            <Card />
+          </b-col>
+          <b-col lg="4" cols="6" class="p-3">
+            <Card />
+          </b-col>
+          <b-col lg="4" cols="6" class="p-3">
+            <Card />
+          </b-col>
            </b-row>
- </b-col>
+        </b-col>
       <b-col lg="4">
         <b-row>
           <b-col lg="12" class="text-center my-0">
             <HeadRight />
           </b-col>
           <b-col lg="12">
-            <EmptyCart />
+            <Cart />
           </b-col>
         </b-row>
       </b-col>
@@ -35,7 +46,7 @@
 import HeadLeft from '../components/HeadLeft'
 import HeadRight from '../components/HeadRight'
 import Card from '../components/Card'
-import EmptyCart from '../components/EmptyCart'
+import Cart from '../components/Cart'
 import axios from 'axios'
 export default {
   data () {
@@ -48,9 +59,9 @@ export default {
     HeadLeft,
     HeadRight,
     Card,
-    EmptyCart
+    Cart
   },
-  mounted: {
+  methods: {
     getFood () {
       axios.get('http://localhost:3000/produks/getall').then((response) => {
         console.log(response.data)

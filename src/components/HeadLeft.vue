@@ -5,20 +5,22 @@
             <b-button v-b-toggle.my-sidebar>=</b-button>
         <Sidebar />
         </b-col>
-        <b-col lg="8" cols="8" class="py-2">
+        <b-col lg="6" cols="6" class="py-2">
             <h3>Food Items</h3>
         </b-col>
-        <b-col lg="2" cols="2" class="py-2 search">
-            <h3><img src="../assets/img/magnifying-glass.png"></h3>
+        <b-col lg="4" cols="4" class="py-2 search">
+            <Search />
         </b-col>
     </b-row>
 </div>
 </template>
 <script>
 import Sidebar from '../components/Sidebar'
+import Search from './Search'
 export default {
   components: {
-    Sidebar
+    Sidebar,
+    Search
   }
 }
 </script>

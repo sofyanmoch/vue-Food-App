@@ -1,17 +1,16 @@
 <template>
-  <b-sidebar id="my-sidebar" shadow>
+  <b-sidebar id="my-sidebar" width="80px" shadow>
     <b-container fluid>
       <b-row>
-        <b-col cols="4" class="product">
+        <b-col cols="12" class="product m-0">
           <img src="../assets/img/fork.png" alt="Menu" class="my-5" />
         </b-col>
-        <b-col cols="4" class="clipboard">
+        <b-col cols="12" class="clipboard m-0">
           <a href="/history">
             <img src="../assets/img/clipboard.png" alt="History" class="my-5" />
           </a>
         </b-col>
-
-        <b-col cols="4" class="add-produk">
+        <b-col cols="12" class="add-produk m-0">
          <button v-b-modal.addProduct><img
             src="../assets/img/add.png"
             alt="Add Menu"
@@ -33,15 +32,15 @@ export default {
 </script>
 <style scoped>
   .add-produk img{
-    width: 50px;
-    height: 50px
+    width: 35px;
+    height: 35px
   }
   .product img{
-     width: 50px;
-    height: 50px
+     width: 35px;
+    height: 35px
   }
   .clipboard img{
-     width: 50px;
-    height: 50px
+     width: 35px;
+    height: 35px
   }
 </style>
