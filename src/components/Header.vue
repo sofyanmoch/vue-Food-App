@@ -15,6 +15,5 @@ export default {
     HeadLeft,
     HeadRight
   }
-
 }
 </script>

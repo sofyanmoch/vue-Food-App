@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-modal id="modal-checkout" centered title="Checkout Item">
+        <b-modal id="modal-checkout" hide-header centered title="Checkout Item">
   </b-modal>
   </div>
 </template>

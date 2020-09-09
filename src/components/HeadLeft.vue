@@ -1,7 +1,7 @@
 <template>
 <div>
-    <b-row class="header pt-0 text-align-center">
-        <b-col lg="2" cols="2" class="py-2">
+    <b-row class="header pt-0">
+        <b-col lg="2" cols="2" class="py-2 text-left">
             <b-button v-b-toggle.my-sidebar>=</b-button>
         <Sidebar />
         </b-col>

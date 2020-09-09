@@ -3,12 +3,14 @@
     <b-container fluid>
       <b-row>
         <b-col cols="12" class="product m-0">
-          <img src="../assets/img/fork.png" alt="Menu" class="my-5" />
+          <router-link to="/">
+            <img src="../assets/img/fork.png" alt="Menu" class="my-5" />
+            </router-link>
         </b-col>
         <b-col cols="12" class="clipboard m-0">
-          <a href="/history">
+          <router-link to="/history">
             <img src="../assets/img/clipboard.png" alt="History" class="my-5" />
-          </a>
+          </router-link>
         </b-col>
         <b-col cols="12" class="add-produk m-0">
          <button v-b-modal.addProduct><img
