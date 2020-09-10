@@ -1,5 +1,5 @@
 # foodapp
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e7abb761-ee86-49cb-ae1e-8eb088d365ba/deploy-status)](https://app.netlify.com/sites/vue-app-first/deploys)
 ## Project setup
 ```
 npm install
