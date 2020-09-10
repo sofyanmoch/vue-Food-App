@@ -27,37 +27,41 @@
         </b-col>
     </b-row>
   </b-col>
-    <!-- <b-col lg="4" md="4" sm="4" cols="6" class="mx-2">
-      <TodayIncome />
-    </b-col>
-    <b-col lg="4" md="4" sm="4" cols="6" class="mx-2">
-      <OrdersChart />
-    </b-col>
-    <b-col lg="4" md="4" sm="4" cols="6" class="mx-2">
-      <IncomeYears/>
-    </b-col> -->
 <b-col lg="12">
   <b-row class="my-5">
-    <b-col lg="11">
+    <b-col lg="11" col="9">
       <h3>Revenue</h3>
     </b-col>
-    <b-col lg="1">
+    <b-col lg="1" cols="3">
       <b-dropdown id="dropdown-1" text="Month" class="m-0 text-right">
         </b-dropdown>
     </b-col>
   </b-row>
+  <b-row>
+    <b-col lg="12" class="my-5">
+      <h2 class="text-center">bayangin aja ini chart js</h2>
+    </b-col>
+  </b-row>
 </b-col>
+<!-- table -->
+
+  <b-col lg="12" class="my-5">
+    <Table />
+  </b-col>
+
 </b-row>
 </div>
 </template>
 <script>
+import Table from '../components/Table'
 import NavHistory from '../components/NavHistory'
 // import TodayIncome from '../components/TodayIncome'
 // import OrdersChart from '../components/OrdersChart'
 // import IncomeYears from '../components/IncomeYears'
 export default {
   components: {
-    NavHistory
+    NavHistory,
+    Table
     // TodayIncome,
     // OrdersChart,
     // IncomeYears
