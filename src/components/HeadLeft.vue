@@ -9,18 +9,51 @@
             <h3>Food Items</h3>
         </b-col>
         <b-col lg="4" cols="4" class="py-2 search">
-            <Search />
+            <b-input-group>
+                      <b-form-input
+                        id="input-1"
+                        type="text"
+                        v-model="name"
+                        placeholder="Search"
+                      ></b-form-input>
+                      <div class="btn btn-outline-primary">
+                        <b-icon icon="search" @click="searchProduct"></b-icon>
+                      </div>
+                    </b-input-group>
+            <!-- <div>
+    <b-form-input v-model="text" placeholder="Search menu ..."></b-form-input>
+  </div> -->
         </b-col>
     </b-row>
 </div>
 </template>
 <script>
+import axios from 'axios'
 import Sidebar from '../components/Sidebar'
-import Search from './Search'
 export default {
+  props: ['sortby', 'type'],
+  data () {
+    return {
+      name: ''
+    }
+  },
+  methods: {
+    searchProduct () {
+      if (this.name !== '') {
+        axios.get(`http://localhost:3000/produks/getall?name=${this.name}`).then((response) => {
+          console.log(response.data.data)
+        // console.log(this.products)
+        }).catch((err) => {
+          console.log(err)
+        })
+        this.products = null
+      } else {
+        this.fetchApi()
+      }
+    }
+  },
   components: {
-    Sidebar,
-    Search
+    Sidebar
   }
 }
 </script>

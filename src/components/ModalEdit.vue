@@ -1,9 +1,9 @@
 <template>
     <div>
-<b-modal id="addProduct" hide-footer centered title="Add Item">
+<b-modal id="modal-update" hide-footer centered title="Add Item">
     <b-row>
         <b-col lg="12">
-            <form @submit.prevent="sendData" enctype="multipart/form-data">
+            <form @submit.prevent="updateData()" enctype="multipart/form-data">
             <b-row class="my-3">
                 <b-col lg="3" cols="3">Name</b-col>
                 <b-col lg="9" cols="9">
@@ -40,8 +40,8 @@
              <div class="form-button">
             <!-- <input type="submit" value="Send"/> -->
             <!-- <input type="button" value="cancel" @click="$emit('addclose')"/> -->
-            <b-button class="mt-3" variant="outline-success" type="submit" block @click="load()" name="button">Add</b-button>
-            <b-button class="mt-3" variant="outline-danger" type="button" block @click="hideModal()">Cancel</b-button>
+            <b-button class="mt-3" variant="outline-success" type="submit" @click="load()" name="button">Add</b-button>
+            <b-button class="mt-3" variant="outline-danger" type="button" @click="hideModal()">Cancel</b-button>
           </div>
             </form>
         </b-col>
@@ -53,6 +53,7 @@
 <script>
 import axios from 'axios'
 export default {
+  props: ['update'],
   data () {
     return {
       name: null,
@@ -63,6 +64,12 @@ export default {
     }
   },
   methods: {
+    // getDetail () {
+    //   axios.get(`http://localhost:3000/getdetail/${id}`)
+    // },
+    hideModal () {
+      location.reload()
+    },
     load () {
       location.reload()
     },
@@ -75,21 +82,6 @@ export default {
       }).catch((err) => {
         console.log(err)
       })
-    },
-    sendData () {
-      const fd = new FormData()
-      fd.append('name', this.name)
-      fd.append('category_id', this.category_id)
-      fd.append('price', this.price)
-      fd.append('image', this.image)
-      console.log(`Category = ${this.category_id}`)
-      axios.post('http://localhost:3000/produks/add', fd)
-        .then((res) => {
-          console.log(res.data.data)
-        })
-        .catch((err) => {
-          console.log(err)
-        })
     }
   },
   mounted () {
